@@ -1,0 +1,13 @@
+{
+  "name": "mocha-cardboard-reporter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Scott Moss",
+  "dependencies": {
+    "mocha": "^2.1.0",
+    "request": "^2.51.0"
+  }
+}
