@@ -1,6 +1,14 @@
 <div id='container'>
 <!-- Your code here -->
-
+  <div class='navigation'>
+<ul>
+  <li><a href='#/links' class='index'>All Links</a></li>
+  <li><a href='#/shorten' class='create'>Shorten</a></li>
+</ul>
+  <a href='/logout' class='logout'>Logout</a>
+</div>
+  <input type='text' ng-model='link'>
+  <button ng-click='addLink(link)'>Shorten Link</button>
 </div>
 
 
