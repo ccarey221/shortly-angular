@@ -1,14 +1,20 @@
-<div id='container' ng-controller="LinksController">
+<div id='container' >
   <!-- Your html here -->
-    <div class='navigation'>
+  <div class='navigation'>
   <ul>
     <li><a href='#/links' class='index'>All Links</a></li>
     <li><a href='#/shorten' class='create'>Shorten</a></li>
   </ul>
-    <a href='/logout' class='logout'>Logout</a>
+    <a class='logout'  ng-click="signout()">Logout</a>
   </div>
   <input type="text" ng-model='filter'>
-  <ul>
-    <li ng-repeat="link in data.links track by $index"> {{ link }} </li>
-  </ul>
+  <div class="link" ng-repeat="link in data.links track by $index">
+    <img src='/redirect_icon.png'/>
+      <div class='info'>
+        <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+        <div class='title'>{{link.title}}</div>
+        <div class='original'>{{link.url}}</div>
+        <a href='{{link.baseUrl}}/{{link.code}}'>{{link.baseUrl}}/{{link.code}}</a>
+      </div>
+  </div>
 </div>
