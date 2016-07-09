@@ -19,4 +19,5 @@ angular.module('shortly.links', [])
     Auth.signout();
   };
 
+
 });

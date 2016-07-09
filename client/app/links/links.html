@@ -7,8 +7,8 @@
   </ul>
     <a class='logout'  ng-click="signout()">Logout</a>
   </div>
-  <input type="text" ng-model='filter'>
-  <div class="link" ng-repeat="link in data.links track by $index">
+  <input type="text" ng-model='searchText'>
+  <div class="link" ng-repeat="link in data.links | orderBy:'-visits' | filter:searchText">
     <img src='/redirect_icon.png'/>
       <div class='info'>
         <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
@@ -17,4 +17,5 @@
         <a href='{{link.baseUrl}}/{{link.code}}'>{{link.baseUrl}}/{{link.code}}</a>
       </div>
   </div>
+  <h1>{{data.links}}</h1>
 </div>
